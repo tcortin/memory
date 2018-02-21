@@ -1,0 +1,41 @@
+.jeu {
+    height: 752px;
+    width: 1280px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+}
+.case {
+    height: 168px;
+    width: 300px;
+    float: left;
+    margin: 10px;
+}
+.cover {
+    position: absolute;
+    height: 168px;
+    width: 300px;
+
+    background-image: url(../images/card-back.png);
+    background-size: cover;
+    cursor: pointer;
+
+    transition: width 0.2s, height 0.2s, transform 0.2s;
+}
+.cover:hover {
+    height: 172px;
+    width: 308px;
+    
+    box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+
+    transform: translateX(-4px) translateY(-2.5px);
+}
+img {
+    height: 168px;
+    width: 300px;
+}
+h1{
+    text-align: center;
+    visibility: hidden;
+}
