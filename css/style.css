@@ -11,6 +11,19 @@ body{
     margin: 0;
     overflow: hidden;
 }
+button{
+    font-family: 'Mustardo', sans-serif;
+    font-size: 36px;
+
+    width: 180px;
+    height: 65px;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    transition: all 0.3s ease;    
+}
 .header{
     font-family: "Mustardo", sans-serif;
     font-size: 22px;
@@ -43,27 +56,15 @@ body{
     padding: 430px 60px 0px 60px;
 }
 .box button{
-    font-family: 'Mustardo', sans-serif;
-    font-size: 36px;
     color: #171329;
 
-    width: 180px;
-    height: 65px;
-    
-    border: none;
-    border-radius: 5px;
     background-color: #fff;
     margin-top: -12px;
-    cursor: pointer;
-
-    transition: all 0.3s ease;
 }
 .box button:hover{
     color: #fff;
     border: #fff 1px solid;
-    border-radius: 5px;
     background-color: #171329;
-    margin-top: -32px;
 }
 .panneau{
     float: right;
@@ -76,29 +77,15 @@ body{
     color: #171329;
 }
 .panneau button{
-    font-family: 'Mustardo', sans-serif;
-    font-size: 36px;
     color: #fff;
 
-    width: 180px;
-    height: 65px;
-    
-    border: none;
-    border-radius: 5px;
     background-color: #171329;
     margin-top: 205px;
-    cursor: pointer;
-
-    transition: all 0.3s ease;
 }
 .panneau button:hover{
     color: #171329;
-
     border: #171329 1px solid;
     background-color: #fff;
-    cursor: pointer;
-
-    transition: all 0.3s ease;
 }
 .message{
     position: absolute;
