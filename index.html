@@ -11,7 +11,24 @@
 
 <body onload="initgame();">
 
-    <h1>Jeu de memory</h1> 
+    
+    <header class="header"></header>
+
+    <div id="message" class="message">
+        <img id="image" src="images/message1.png" alt="">
+    </div>
+    
+    <div id="menu" class="menu">
+        <div class="box">
+            <p id="bravo"></p>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+
+    <div class="panneau">
+        <p id="essais">Nombre d'essais : 0</p>
+        <button onclick="restart()">Restart</button>
+    </div>
 
     <div class="jeu">
         <div class="case">
