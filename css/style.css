@@ -72,9 +72,14 @@ button{
     margin-right: 50px;
 }
 .panneau p{
+    font-family: 'Mustardo', sans-serif;
+    font-size: 35px;
+    color: #171329;
+}
+.panneau span{
     font-family: 'Freestyle', sans-serif;
     font-size: 45px;
-    color: #171329;
+    color: #171329;    
 }
 .panneau button{
     color: #fff;

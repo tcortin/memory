@@ -31,7 +31,7 @@ function restart () {
     initgame();
     result = 0;
     laps = 0;
-    tries.innerHTML = "Nombre d'essais : " + laps;
+    tries.innerHTML = laps;
 }
 
 // AFFICHER UN MESSAGE A CHAQUE COUP REUSSI //
@@ -60,14 +60,14 @@ function clic (n) {
             laps++;
             imgp = document.getElementById('img' + precedente);
             coverp = document.getElementById('cover' + precedente);
-            tries.innerHTML = "Nombre d'essais : " + laps;
+            tries.innerHTML = laps;
             if (imgp.src == img.src) { // VERIFICATION DE LA SOURCE DE CHACUNE DES CARTES
                 result++;
                 if (result > 0 && result < 8) {
                     success(); // AFFICHER LE MESSAGE //
                 }
                 else if (result == 8) {
-                    document.getElementById('bravo').innerHTML = "Felicitations ! Tu as trouvé toutes les paires en " + laps + " essais et x temps !";                    
+                    document.getElementById('bravo').innerHTML = "Félicitations ! Tu as trouvé toutes les paires en " + laps + " essais et x temps !";                    
                     $(mn).addClass('is-success'); // AFFICHER LE MENU //
                 }                
             } 
@@ -75,7 +75,7 @@ function clic (n) {
                 attente = 1;
                 setTimeout('reset();',800);
             }            
-            precedente = -1; // REINITIALISATION DE LA VALEUR DE LA VARIABLE PRECEDENTE
+            precedente = -1; // REINITIALISATION DE LA VALEUR DE LA VARIABLE "PRECEDENTE"
         }
     }
 }
