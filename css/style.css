@@ -10,6 +10,7 @@ body{
     padding: 0;
     margin: 0;
     overflow: hidden;
+    position: fixed;
 }
 button{
     font-family: 'Mustardo', sans-serif;
