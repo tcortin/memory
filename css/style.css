@@ -171,7 +171,7 @@ h1{
 and (min-width : 300px) 
 and (max-width : 526px) {
     .jeu {
-        height: 100vh;
+        height: 430px;
         width: 312px;
         margin: 0 auto;
         background: #fff;
