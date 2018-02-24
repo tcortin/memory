@@ -22,6 +22,10 @@ button{
     border-radius: 5px;
     cursor: pointer;
     
+    -webkit-transition: all 0.3s ease;
+    
+    -o-transition: all 0.3s ease;
+    
     transition: all 0.3s ease;    
 }
 .header{
@@ -99,6 +103,10 @@ button{
     width: 335px;
     height: 126px;
 
+    -webkit-transition: all 0.3s ease-in;
+
+    -o-transition: all 0.3s ease-in;
+
     transition: all 0.3s ease-in;
 }
 .is-success{
@@ -127,16 +135,30 @@ button{
     background-size: cover;
     cursor: pointer;
 
+    -webkit-transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
+
+    transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
+
+    -o-transition: width 0.2s, height 0.2s, transform 0.2s;
+
     transition: width 0.2s, height 0.2s, transform 0.2s;
+
+    transition: width 0.2s, height 0.2s, transform 0.2s, -webkit-transform 0.2s;
 }
 .cover:hover {
     height: 172px;
     width: 308px;
     
-    box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+    
+            box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 
-    transform: translateX(-4px) translateY(-2.5px);
+    -webkit-transform: translateX(-4px) translateY(-2.5px);
+
+        -ms-transform: translateX(-4px) translateY(-2.5px);
+
+            transform: translateX(-4px) translateY(-2.5px);
 }
 .case img {
     height: 168px;
@@ -149,7 +171,7 @@ h1{
 and (min-width : 300px) 
 and (max-width : 526px) {
     .jeu {
-        height: 450px;
+        height: 100vh;
         width: 312px;
         margin: 0 auto;
         background: #fff;
@@ -179,16 +201,30 @@ and (max-width : 526px) {
         background-size: cover;
         cursor: pointer;
     
+        -webkit-transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
+    
+        transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
+    
+        -o-transition: width 0.2s, height 0.2s, transform 0.2s;
+    
         transition: width 0.2s, height 0.2s, transform 0.2s;
+    
+        transition: width 0.2s, height 0.2s, transform 0.2s, -webkit-transform 0.2s;
     }
     .cover:hover {
         height: 56px;
         width: 100px;
         
-        box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+        -webkit-box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+        
+                box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
         border-radius: 1px;
     
-        transform: translateX(-3.5px) translateY(-2px);
+        -webkit-transform: translateX(-3.5px) translateY(-2px);
+    
+            -ms-transform: translateX(-3.5px) translateY(-2px);
+    
+                transform: translateX(-3.5px) translateY(-2px);
     }
     .case img {
         height: 53px;
@@ -205,6 +241,10 @@ and (max-width : 526px) {
         border-radius: 5px;
         cursor: pointer;
         
+        -webkit-transition: all 0.3s ease;
+        
+        -o-transition: all 0.3s ease;
+        
         transition: all 0.3s ease;    
     }
     .message{
@@ -213,6 +253,10 @@ and (max-width : 526px) {
         right: -150px;
         width: 150px;
         height: 56px;
+    
+        -webkit-transition: all 0.3s ease-in;
+    
+        -o-transition: all 0.3s ease-in;
     
         transition: all 0.3s ease-in;
     }
