@@ -260,10 +260,11 @@ and (max-width : 526px) {
     }
     .panneau{
         position: absolute;
-        text-align: center;
+        text-align: left;
         width: 100%;
         top: 45px;
         margin: 0 auto;
+        padding-left: 10px;
     }
     .panneau p{
         font-family: 'Mustardo', sans-serif;
@@ -280,6 +281,6 @@ and (max-width : 526px) {
     
         background-color: #171329;
         margin-top: 313px;
-        margin-left: 105px;
+        margin-left: 150px;
     }    
 }
