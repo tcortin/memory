@@ -109,7 +109,7 @@ button{
     background-color: #fff;
 }
 .message{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -335px;
     width: 335px;
@@ -194,7 +194,7 @@ and (orientation : portrait) {
         margin-bottom: 5px;
     }
     .message{
-        position: absolute;
+        position: fixed;
         top: -4px;
         right: 150;
         width: 150px;
@@ -358,7 +358,7 @@ and (orientation : landscape) {
         margin-bottom: 5px;
     }
     .message{
-        position: absolute;
+        position: fixed;
         top: -4px;
         right: 150;
         width: 150px;
@@ -606,7 +606,7 @@ and (orientation : landscape) {
         background-color: #fff;
     }
     .message{
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -214px;
         width: 214px;
@@ -783,7 +783,7 @@ and (orientation : portrait) {
         background-color: #fff;
     }
     .message{
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -214px;
         width: 214px;
