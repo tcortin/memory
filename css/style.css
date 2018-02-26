@@ -77,7 +77,6 @@ button{
 .panneau{
     padding: 40px;
     text-align: center;
-    align-self: flex-start;
 }
 .panneau p{
     font-family: 'Mustardo', sans-serif;
