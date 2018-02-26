@@ -52,7 +52,7 @@ button{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 100;
-    display: none;
+    display: block;
 }
 .box{
     width: 790px;
@@ -70,6 +70,7 @@ button{
 .box button{
     color: #171329;
     background-color: #fff;
+    margin-top: -12px;
 }
 .box button:hover{
     color: #fff;
