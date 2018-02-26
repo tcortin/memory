@@ -285,9 +285,8 @@ and (orientation : portrait) {
         width: 300px;
         height: 243px;
         text-align: center;
-        background: url(../images/menu.png);
+        background: url(../images/menu.png) center no-repeat;
         background-size: 300px 243px;
-        margin-top: 120px;
     }
     .box p{
         font-family: 'Freestyle', sans-serif;
@@ -439,9 +438,9 @@ and (orientation : landscape) {
         width: 300px;
         height: 243px;
         text-align: center;
-        background: url(../images/menu.png);
+        background: url(../images/menu.png) center no-repeat;
         background-size: 300px 243px;
-        margin-top: 120px;
+        margin-top: 30px;
     }
     .box p{
         font-family: 'Freestyle', sans-serif;
@@ -509,15 +508,15 @@ and (orientation : landscape) {
         display: none;
     }
     .box{
-        width: 790px;
-        height: 642px;
+        width: 600px;
         text-align: center;
-        background: url(../images/menu.png);
-        margin: 120px auto 0 auto;
+        background: url(../images/menu.png)center no-repeat;
+        background-size: 600px;
+        margin: 70px auto 0 auto;
     }
     .box p{
         font-family: 'Freestyle', sans-serif;
-        font-size: 50px;
+        font-size: 30px;
         color: #fff;
         padding: 430px 60px 0px 60px;
     }
@@ -669,22 +668,22 @@ and (orientation : portrait) {
         display: none;
     }
     .box{
-        width: 790px;
-        height: 642px;
+        width: 600px;
         text-align: center;
-        background: url(../images/menu.png);
+        background: url(../images/menu.png) center no-repeat;
+        background-size: 600px;
         margin: 120px auto 0 auto;
     }
     .box p{
         font-family: 'Freestyle', sans-serif;
-        font-size: 50px;
+        font-size: 32px;
         color: #fff;
-        padding: 430px 60px 0px 60px;
+        padding: 425px 60px 0px 60px;
     }
     .box button{
         color: #171329;
         background-color: #fff;
-        margin-top: -12px;
+        margin-top: -8px;
     }
     .box button:hover{
         color: #fff;
