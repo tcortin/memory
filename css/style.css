@@ -114,6 +114,7 @@ button{
     right: -335px;
     width: 335px;
     height: 126px;
+    z-index: 99;
 
     -webkit-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
@@ -199,6 +200,7 @@ and (orientation : portrait) {
         right: 150;
         width: 150px;
         height: 56px;
+        z-index: 99;
     
         -webkit-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
@@ -363,6 +365,7 @@ and (orientation : landscape) {
         right: 150;
         width: 150px;
         height: 56px;
+        z-index: 99;
     
         -webkit-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
@@ -611,6 +614,7 @@ and (orientation : landscape) {
         right: -214px;
         width: 214px;
         height: 80px;
+        z-index: 99;
     
         -webkit-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
@@ -788,6 +792,7 @@ and (orientation : portrait) {
         right: -214px;
         width: 214px;
         height: 80px;
+        z-index: 99;
     
         -webkit-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
