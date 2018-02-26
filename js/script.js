@@ -34,7 +34,7 @@ function restart () {
     tries.innerHTML = laps;
 }
 
-// AFFICHER UN MESSAGE A CHAQUE COUP REUSSI //
+// AFFICHER UN MESSAGE D'ENCOURAGEMENT //
 
 function success () {
     const m = Math.ceil(5*Math.random()-1);
@@ -56,7 +56,7 @@ function clic (n) {
         if (precedente < 0) {
             precedente = n; // STOCKE L'ID DE CETTE CARTE
         } 
-        else { // AFFICHE LA DEUXIEME CARTE
+        else if (n != precedente) { // AFFICHE LA DEUXIEME CARTE
             laps++;
             imgp = document.getElementById('img' + precedente);
             coverp = document.getElementById('cover' + precedente);

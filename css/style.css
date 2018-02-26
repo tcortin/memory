@@ -14,6 +14,12 @@ html, body{
     position:relative;
     overflow:hidden;
 }
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 button{
     font-family: 'Mustardo', sans-serif;
     font-size: 36px;
@@ -25,10 +31,8 @@ button{
     border-radius: 5px;
     cursor: pointer;
     
-    -webkit-transition: all 0.3s ease;
-    
-    -o-transition: all 0.3s ease;
-    
+    -webkit-transition: all 0.3s ease;    
+    -o-transition: all 0.3s ease;    
     transition: all 0.3s ease;    
 }
 .header{
@@ -53,7 +57,6 @@ button{
     width: 790px;
     height: 642px;
     text-align: center;
-    margin: 120px auto 0 auto;
     background: url(../images/menu.png);
 }
 .box p{
@@ -64,9 +67,7 @@ button{
 }
 .box button{
     color: #171329;
-
     background-color: #fff;
-    margin-top: -12px;
 }
 .box button:hover{
     color: #fff;
@@ -74,9 +75,9 @@ button{
     background-color: #171329;
 }
 .panneau{
-    float: right;
+    padding: 40px;
     text-align: center;
-    margin-right: 50px;
+    align-self: flex-start;
 }
 .panneau p{
     font-family: 'Mustardo', sans-serif;
@@ -90,9 +91,7 @@ button{
 }
 .panneau button{
     color: #fff;
-
     background-color: #171329;
-    margin-top: 205px;
 }
 .panneau button:hover{
     color: #171329;
@@ -107,9 +106,7 @@ button{
     height: 126px;
 
     -webkit-transition: all 0.3s ease-in;
-
     -o-transition: all 0.3s ease-in;
-
     transition: all 0.3s ease-in;
 }
 .is-success{
@@ -117,15 +114,13 @@ button{
     display: block;
 }
 .jeu {
-    height: 752px;
     width: 1280px;
-    margin: 0 auto;
     background: #fff;
     border-radius: 10px;
 }
 .case {
-    height: 168px;
-    width: 300px;
+    max-height: 168px;
+    max-width: 300px;
     float: left;
     margin: 10px;
 }
@@ -139,61 +134,72 @@ button{
     cursor: pointer;
 
     -webkit-transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
-
     transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
-
     -o-transition: width 0.2s, height 0.2s, transform 0.2s;
-
     transition: width 0.2s, height 0.2s, transform 0.2s;
-
     transition: width 0.2s, height 0.2s, transform 0.2s, -webkit-transform 0.2s;
 }
 .cover:hover {
     height: 172px;
-    width: 308px;
-    
-    -webkit-box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
-    
-            box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+    width: 308px;  
     border-radius: 5px;
 
+    -webkit-box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);    
+            box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);            
+
     -webkit-transform: translateX(-4px) translateY(-2.5px);
-
         -ms-transform: translateX(-4px) translateY(-2.5px);
+            transform: translateX(-4px) translateY(-2.5px);}
 
-            transform: translateX(-4px) translateY(-2.5px);
-}
-.case img {
-    height: 168px;
-    width: 300px;
-}
-h1{
-    text-align: center;
-}
+
 @media only screen 
 and (min-width : 300px) 
-and (max-width : 526px) {
-    .jeu {
-        height: 430px;
-        width: 312px;
-        margin: 0 auto;
-        background: #fff;
-        border-radius: 10px;
+and (max-width : 668px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .header{
         font-family: "Mustardo", sans-serif;
         font-size: 22px;
-        height: 60px;
+        height: 45px;
         width: 100%;
         color: #171329;
-        background: url(../images/logo-s.png) center center no-repeat #171329;
-        margin-bottom: 40px;
+        background: url(../images/logo-s.png) left no-repeat #171329;
+        margin-bottom: 5px;
+    }
+    .message{
+        position: absolute;
+        top: -4px;
+        right: 150;
+        width: 150px;
+        height: 56px;
+    
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+    }
+    .message img{
+        width: 150px;
+        height: 56px;
+    }
+    .jeu {
+        width: 208px;
+        background: #fff;
+        border-radius: 10px;
     }
     .case {
-        height: 53px;
-        width: 94px;
+        max-height: 53px;
+        max-width: 94px;
         float: left;
         margin: 5px;
+    }
+    .case img {
+        max-height: 53px;
+        max-width: 94px;
     }
     .cover {
         position: absolute;
@@ -205,33 +211,47 @@ and (max-width : 526px) {
         cursor: pointer;
     
         -webkit-transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
-    
         transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
-    
         -o-transition: width 0.2s, height 0.2s, transform 0.2s;
-    
         transition: width 0.2s, height 0.2s, transform 0.2s;
-    
         transition: width 0.2s, height 0.2s, transform 0.2s, -webkit-transform 0.2s;
     }
     .cover:hover {
         height: 56px;
-        width: 100px;
-        
-        -webkit-box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
-        
-                box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);
+        width: 100px;  
         border-radius: 1px;
     
+        -webkit-box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);    
+                box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.3);            
+    
         -webkit-transform: translateX(-3.5px) translateY(-2px);
-    
             -ms-transform: translateX(-3.5px) translateY(-2px);
-    
-                transform: translateX(-3.5px) translateY(-2px);
+                transform: translateX(-3.5px) translateY(-2px);}
+
+    .panneau{
+        padding: 0 10px 0 10px;
+        text-align: center;
+        align-self: center;
+        margin-bottom: 20px;
     }
-    .case img {
-        height: 53px;
-        width: 94px;
+    .panneau p{
+        font-family: 'Mustardo', sans-serif;
+        font-size: 16px;
+        color: #171329;
+    }
+    .panneau span{
+        font-family: 'Freestyle', sans-serif;
+        font-size: 18px;
+        color: #171329;    
+    }
+    .panneau button{
+        color: #fff;
+        background-color: #171329;
+    }
+    .panneau button:hover{
+        color: #171329;
+        border: #171329 1px solid;
+        background-color: #fff;
     }
     button{
         font-family: 'Mustardo', sans-serif;
@@ -241,52 +261,29 @@ and (max-width : 526px) {
         height: 36px;
         
         border: none;
-        border-radius: 5px;
+        border-radius: 2px;
         cursor: pointer;
         
-        -webkit-transition: all 0.3s ease;
-        
-        -o-transition: all 0.3s ease;
-        
+        -webkit-transition: all 0.3s ease;    
+        -o-transition: all 0.3s ease;    
         transition: all 0.3s ease;    
-    }
-    .message{
-        position: absolute;
-        top: 50px;
-        right: -150px;
-        width: 150px;
-        height: 56px;
-    
-        -webkit-transition: all 0.3s ease-in;
-    
-        -o-transition: all 0.3s ease-in;
-    
-        transition: all 0.3s ease-in;
-    }
-    .message img{
-        width: 150px;
-        height: 56px;
     }
     .menu{
         position: absolute;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         z-index: 100;
         display: none;
-    }
-    .is-success{
-        right: 0;
-        display: block;
     }
     .box{
         width: 300px;
         height: 243px;
         text-align: center;
-        margin: 100px auto 0 auto;
         background: url(../images/menu.png);
         background-size: 300px 243px;
+        margin-top: 120px;
     }
     .box p{
         font-family: 'Freestyle', sans-serif;
@@ -298,36 +295,10 @@ and (max-width : 526px) {
         color: #171329;
     
         background-color: #fff;
-        margin-top: -12px;
+        margin-top: -40px;
     }
-    .box button:hover{
-        color: #fff;
-        border: #fff 1px solid;
-        background-color: #171329;
+    .is-success{
+        right: 0;
+        display: block;
     }
-    .panneau{
-        position: absolute;
-        text-align: left;
-        width: 100%;
-        top: 45px;
-        margin: 0 auto;
-        padding-left: 10px;
-    }
-    .panneau p{
-        font-family: 'Mustardo', sans-serif;
-        font-size: 18px;
-        color: #171329;
-    }
-    .panneau span{
-        font-family: 'Freestyle', sans-serif;
-        font-size: 30px;
-        color: #171329;    
-    }
-    .panneau button{
-        color: #fff;
-    
-        background-color: #171329;
-        margin-top: 313px;
-        margin-left: 150px;
-    }    
 }
