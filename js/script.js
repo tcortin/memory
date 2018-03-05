@@ -2,7 +2,12 @@ const messages = ["images/message1.png","images/message2.png","images/message3.p
 const msg = document.getElementById('message');
 const msgi = document.getElementById('image');
 const mn = document.getElementById('menu');
+const opt = document.getElementById('options');
 const tries = document.getElementById('essais');
+const audio = document.getElementById('music');
+const coverall = document.getElementsByClassName('cover');
+const mdm = document.getElementsByClassName('medium');
+const hrd = document.getElementsByClassName('hard');
 
 let precedente = -1; // UTILISEE POUR STOCKER L'ID DE LA PRECEDENTE CARTE
 let attente = 0; // UTILISEE POUR AUTORISER OU NON LE CLIC
@@ -12,31 +17,81 @@ let cover;
 let coverp;
 let img;
 let imgp;
+let nbcarte;
 
-// CACHER LES DEUX DERNIERES CARTES //
+// SWITCHER LES SOURCES DE DEUX CARTES 200 FOIS //
 
-function reset () {
+const initgame = (nombre) => {
+
+    $(opt).removeClass('is-success');
+    $(coverall).fadeIn();
+    $(mn).removeClass('is-success');
+    result = 0;
+    laps = 0;
+    tries.innerHTML = laps;
+    nbcarte = nombre;
+
+    for (let a = 2 ; a <= 16 ; a = a + 2) { // REMETTRE LES CARTES A LEUR EMPLACEMENT D'ORIGINE
+        const b = a-1;
+        const c = a/2;
+        const image1 = document.getElementById('img' + b);
+        const image2 = document.getElementById('img' + a);
+
+        image1.src = "images/sneakers-0"+ c +".png";
+        image2.src = image1.src;
+    }
+
+    for (let i = 1 ; i <= 200 ; i++) { // MELANGER LES CARTES
+        const n1 = Math.ceil(nombre*Math.random());
+        const n2 = Math.ceil(nombre*Math.random());
+        const img1 = document.getElementById('img' + n1);
+        const img2 = document.getElementById('img' + n2);
+        const src1 = img1.src;
+        const src2 = img2.src;
+        
+        img1.src = src2;
+        img2.src = src1;
+    }
+}
+
+// CHOISIR SA DIFFICULTE //
+
+const easy = () => {
+    $(mdm).fadeOut();
+    $(hrd).fadeOut();
+    initgame(8);    
+}
+
+const normal = () => {
+    $(mdm).fadeIn();
+    $(hrd).fadeOut();
+    initgame(12);
+}
+
+const hard = () => {
+    $(mdm).fadeIn();
+    $(hrd).fadeIn();
+    initgame(16);
+}
+
+// CACHER LES DEUX DERNIERES CARTES CLIQUEES //
+
+const reset = () => {
     $(cover).fadeIn();
     $(coverp).fadeIn();
     attente = 0;
 }
 
-// REMETTRE LE JEU A L'ETAT INITIAL //
+// REDEFINIR LA DIFFICULTE //
 
-function restart () {
-    const coverall = document.getElementsByClassName('cover');
-
-    $(coverall).fadeIn();
+const restart = () => {
     $(mn).removeClass('is-success');
-    initgame();
-    result = 0;
-    laps = 0;
-    tries.innerHTML = laps;
+    $(opt).addClass('is-success');
 }
 
 // AFFICHER UN MESSAGE D'ENCOURAGEMENT //
 
-function success () {
+const success = () => {
     const m = Math.ceil(5*Math.random()-1);
 
     msgi.src = messages[m];
@@ -48,7 +103,7 @@ function success () {
 
 // FADEOUT ET VERIFIER LA SOURCE DES DEUX CARTES AFFICHEES //
 
-function clic (n) {
+const clic = n => {
     if (attente != 1) { // AFFICHE LA PREMIERE CARTE
         img = document.getElementById('img' + n);
         cover = document.getElementById('cover' + n);
@@ -63,10 +118,10 @@ function clic (n) {
             tries.innerHTML = laps;
             if (imgp.src == img.src) { // VERIFICATION DE LA SOURCE DE CHACUNE DES CARTES
                 result++;
-                if (result > 0 && result < 8) {
+                if (result > 0 && result < nbcarte/2) {
                     success(); // AFFICHER LE MESSAGE //
                 }
-                else if (result == 8) {
+                else if (result == nbcarte/2) {
                     document.getElementById('bravo').innerHTML = "Félicitations ! Tu as trouvé toutes les paires en " + laps + " essais et x temps !";                    
                     $(mn).addClass('is-success'); // AFFICHER LE MENU //
                 }                
@@ -77,21 +132,5 @@ function clic (n) {
             }            
             precedente = -1; // REINITIALISATION DE LA VALEUR DE LA VARIABLE "PRECEDENTE"
         }
-    }
-}
-
-// SWITCHER LES SOURCES DE DEUX CARTES 200 FOIS //
-
-function initgame () {
-    for (let i = 1 ; i <= 200 ; i++) {
-        const n1 = Math.ceil(16*Math.random());
-        const n2 = Math.ceil(16*Math.random());
-        const img1 = document.getElementById('img' + n1);
-        const img2 = document.getElementById('img' + n2);
-        const src1 = img1.src;
-        const src2 = img2.src;
-        
-        img1.src = src2;
-        img2.src = src1;        
     }
 }

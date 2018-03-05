@@ -66,7 +66,7 @@ button{
     width: 790px;
     height: 642px;
     text-align: center;
-    background: url(../images/menu.png);
+    background: url(../images/menu.png) center no-repeat;
     margin: 120px auto 0 auto;
 }
 .box p{
@@ -84,6 +84,12 @@ button{
     color: #fff;
     border: #fff 1px solid;
     background-color: #171329;
+}
+.buttons{
+    padding: 470px 0 0 0;
+}
+.buttons button{
+    margin: 0 15px;
 }
 .panneau{
     padding: 40px;
@@ -321,6 +327,12 @@ and (orientation : portrait) {
         background-color: #fff;
         margin-top: -40px;
     }
+    .buttons{
+        padding: 165px 0 0 0;
+    }
+    .buttons button{
+        margin: 5px 5px;
+    }
     .is-success{
         right: 0;
         display: block;
@@ -487,6 +499,12 @@ and (orientation : landscape) {
         background-color: #fff;
         margin-top: -40px;
     }
+    .buttons{
+        padding: 165px 0 0 0;
+    }
+    .buttons button{
+        margin: 5px 5px;
+    }    
     .is-success{
         right: 0;
         display: block;
@@ -571,6 +589,12 @@ and (orientation : landscape) {
         color: #fff;
         border: #fff 1px solid;
         background-color: #171329;
+    }
+    .buttons{
+        padding: 440px 0 0 0;
+    }
+    .buttons button{
+        margin: 0 15px;
     }
     .panneau{
         min-width: 100vw;
@@ -749,6 +773,12 @@ and (orientation : portrait) {
         color: #fff;
         border: #fff 1px solid;
         background-color: #171329;
+    }
+    .buttons{
+        padding: 440px 0 0 0;
+    }
+    .buttons button{
+        margin: 0 15px;
     }
     .panneau{
         min-width: 100vw;
