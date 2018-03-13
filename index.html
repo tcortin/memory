@@ -18,9 +18,9 @@
         <div id="options" class="menu"><!-- MENU DES DIFFICULTES -->
             <div class="box">
                 <div class="buttons">
-                    <button onclick="sneakersMemory.easy()">Easy</button>
-                    <button onclick="sneakersMemory.normal()">Normal</button>
-                    <button onclick="sneakersMemory.hard()">Hard</button>
+                    <button onclick="sneakersMemory.difficulty(8)">Easy</button>
+                    <button onclick="sneakersMemory.difficulty(12)">Normal</button>
+                    <button onclick="sneakersMemory.difficulty(16)">Hard</button>
                 </div>
             </div>
         </div>
@@ -36,72 +36,70 @@
             <img id="image" src="images/message1.png" alt="">
         </div>
 
-        <div id="music"></div><!-- SON -->
-
         <div class="container">
 
             <div class="jeu"><!-- JEU -->
-                <div class="case">
+                <div id="case1" class="case">
                     <div class="cover" id="cover1" onclick="sneakersMemory.clic(1)"></div>
                     <img id="img1"  src="images/sneakers-01.png"/>
                 </div>
-                <div class="case">
+                <div id="case2" class="case">
                     <div class="cover" id="cover2" onclick="sneakersMemory.clic(2)"></div>
                     <img id="img2"  src="images/sneakers-01.png"/>
                 </div>
-                <div class="case">
+                <div id="case3" class="case">
                     <div class="cover" id="cover3" onclick="sneakersMemory.clic(3)"></div>
                     <img id="img3"  src="images/sneakers-02.png"/>
                 </div>
-                <div class="case">
+                <div id="case4" class="case">
                     <div class="cover" id="cover4" onclick="sneakersMemory.clic(4)"></div>
                     <img id="img4"  src="images/sneakers-02.png"/>
                 </div>
-                <div class="case">
+                <div id="case5" class="case">
                     <div class="cover" id="cover5" onclick="sneakersMemory.clic(5)"></div>
                     <img id="img5"  src="images/sneakers-03.png"/>
                 </div>
-                <div class="case">
+                <div id="case6" class="case">
                     <div class="cover" id="cover6" onclick="sneakersMemory.clic(6)"></div>
                     <img id="img6"  src="images/sneakers-03.png"/>
                 </div>
-                <div class="case">
+                <div id="case7" class="case">
                     <div class="cover" id="cover7" onclick="sneakersMemory.clic(7)"></div>
                     <img id="img7"  src="images/sneakers-04.png"/>
                 </div>
-                <div class="case">
+                <div id="case8" class="case">
                     <div class="cover" id="cover8" onclick="sneakersMemory.clic(8)"></div>
                     <img id="img8"  src="images/sneakers-04.png"/>
                 </div>
-                <div class="case medium">
+                <div id="case9" class="case">
                     <div class="cover" id="cover9" onclick="sneakersMemory.clic(9)"></div>
                     <img id="img9"  src="images/sneakers-05.png"/>
                 </div>
-                <div class="case medium">
+                <div id="case10" class="case">
                     <div class="cover" id="cover10" onclick="sneakersMemory.clic(10)"></div>
                     <img id="img10"  src="images/sneakers-05.png"/>
                 </div>
-                <div class="case medium">
+                <div id="case11" class="case">
                     <div class="cover" id="cover11" onclick="sneakersMemory.clic(11)"></div>
                     <img id="img11"  src="images/sneakers-06.png"/>
                 </div>
-                <div class="case medium">
+                <div id="case12" class="case">
                     <div class="cover" id="cover12" onclick="sneakersMemory.clic(12)"></div>
                     <img id="img12"  src="images/sneakers-06.png"/>
                 </div>
-                <div class="case hard">
+                <div id="case13" class="case">
                     <div class="cover" id="cover13" onclick="sneakersMemory.clic(13)"></div>
                     <img id="img13"  src="images/sneakers-07.png"/>
                 </div>
-                <div class="case hard">
+                <div id="case14" class="case">
                     <div class="cover" id="cover14" onclick="sneakersMemory.clic(14)"></div>
                     <img id="img14"  src="images/sneakers-07.png"/>
                 </div>
-                <div class="case hard">
+                <div id="case15" class="case">
                     <div class="cover" id="cover15" onclick="sneakersMemory.clic(15)"></div>
                     <img id="img15"  src="images/sneakers-08.png"/>
                 </div>
-                <div class="case hard">
+                <div id="case16" class="case">
                     <div class="cover" id="cover16" onclick="sneakersMemory.clic(16)"></div>
                     <img id="img16"  src="images/sneakers-08.png"/>
                 </div>
