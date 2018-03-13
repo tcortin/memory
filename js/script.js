@@ -7,10 +7,7 @@ class Game {
         this.mn = document.getElementById('menu');
         this.opt = document.getElementById('options');
         this.tries = document.getElementById('essais');
-        this.audio = document.getElementById('music');
         this.coverall = document.getElementsByClassName('cover');
-        this.mdm = document.getElementsByClassName('medium');
-        this.hrd = document.getElementsByClassName('hard');
         this.precedente = -1; // UTILISEE POUR STOCKER L'ID DE LA PRECEDENTE CARTE
         this.attente = 0; // UTILISEE POUR AUTORISER OU NON LE CLIC
         this.result = 0;
@@ -59,25 +56,16 @@ class Game {
 
     // CHOISIR SA DIFFICULTE //
 
-    easy() {
-        $(this.mdm).fadeOut();
-        $(this.hrd).fadeOut();
-        this.initgame(8);
-        this.sound(5);
-    }
-
-    normal() {
-        $(this.mdm).fadeIn();
-        $(this.hrd).fadeOut();
-        this.initgame(12);
-        this.sound(5);
-    }
-
-    hard() {
-        $(this.mdm).fadeIn();
-        $(this.hrd).fadeIn();
-        this.initgame(16);
-        this.sound(5);
+    difficulty(x) {
+        for (let i=1; i<=16; i++){
+            const caseId = document.getElementById(`case${i}`);
+            if (i<=x){
+                $(caseId).fadeIn();
+            } else {
+                $(caseId).fadeOut();            
+            }
+        }
+        this.initgame(x);
     }
 
     // CACHER LES DEUX DERNIERES CARTES CLIQUEES //
@@ -93,13 +81,12 @@ class Game {
     restart() {
         $(this.mn).removeClass('is-success');
         $(this.opt).addClass('is-success');
-        this.sound(5);
     }
 
     // AFFICHER UN MESSAGE D'ENCOURAGEMENT //
 
     success() {
-        const m = Math.ceil(5*Math.random()-1);
+        const m = Math.ceil(this.messages.length*Math.random()-1);
 
         this.msgi.src = this.messages[m];
         $(this.msg).addClass("is-success");
@@ -112,7 +99,6 @@ class Game {
 
     clic(n) {
         if (this.attente != 1) { // AFFICHE LA PREMIERE CARTE
-            this.sound(3);
             this.img = document.getElementById(`img${n}`);
             this.cover = document.getElementById(`cover${n}`);
             $(this.cover).fadeOut();
@@ -126,12 +112,10 @@ class Game {
                 this.tries.innerHTML = this.laps;
                 if (this.imgp.src == this.img.src) { // VERIFICATION DE LA SOURCE DE CHACUNE DES CARTES
                     this.result++;
-                    this.sound(4);
                     if (this.result > 0 && this.result < this.nbcarte/2) {
                         this.success(); // AFFICHER LE MESSAGE //
                     }
                     else if (this.result == this.nbcarte/2) {
-                        this.sound(6);
                         document.getElementById('bravo').innerHTML = `Félicitations ! Tu as trouvé toutes les paires en ${this.laps} essais !`;                    
                         $(this.mn).addClass('is-success'); // AFFICHER LE MENU //
                     }                
@@ -143,13 +127,6 @@ class Game {
                 this.precedente = -1; // REINITIALISATION DE LA VALEUR DE LA VARIABLE "PRECEDENTE"
             }
         }
-    }
-
-    // JOUER UN SON //
-
-    sound(son) {
-        const audio = document.getElementById('music');
-        audio.innerHTML = `<audio autoplay='true'><source src='sons/${son}.mp3' type='audio/mp3'/></audio>`;
     }
 }
 
