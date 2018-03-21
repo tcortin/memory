@@ -28,6 +28,7 @@ html, body{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    min-height: 80vh;
 }
 button{
     font-family: 'Mustardo', sans-serif;
@@ -131,8 +132,16 @@ button{
     display: block;
 }
 .jeu {
+    justify-content: center;
+    align-items: center;
     width: 1280px;
     background: #fff;
+}
+.easy{
+    max-width: 640px;
+}
+.normal{
+    max-width: 960px;
 }
 .case {
     max-height: 168px;
@@ -189,7 +198,6 @@ and (orientation : portrait) {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        min-height: 100vh;
     }
     .header{
         font-family: "Mustardo", sans-serif;
@@ -217,6 +225,8 @@ and (orientation : portrait) {
         height: 56px;
     }
     .jeu {
+        justify-content: center;
+        align-items: center;
         width: 208px;
         background: #fff;
     }
@@ -360,7 +370,6 @@ and (orientation : landscape) {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        min-height: 100vh;
     }
     .header{
         font-family: "Mustardo", sans-serif;
@@ -388,8 +397,16 @@ and (orientation : landscape) {
         height: 56px;
     }
     .jeu {
+        justify-content: center;
+        align-items: center;
         width: 416px;
         background: #fff;
+    }
+    .easy{
+        max-width: 208px;
+    }
+    .normal{
+        max-width: 312px;
     }
     .case {
         max-height: 53px;
@@ -532,7 +549,6 @@ and (orientation : landscape) {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        min-height: 100%;
     }
     button{
         font-family: 'Mustardo', sans-serif;
@@ -653,9 +669,17 @@ and (orientation : landscape) {
         display: block;
     }
     .jeu {
+        justify-content: center;
+        align-items: center;
         max-width: 920px;
         background: #fff;
         margin: 0 auto;
+    }
+    .easy{
+        max-width: 480px;
+    }
+    .normal{
+        max-width: 720px;
     }
     .case {
         max-height: 123px;
@@ -716,7 +740,6 @@ and (orientation : portrait) {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        min-height: 100%;
     }
     button{
         font-family: 'Mustardo', sans-serif;
@@ -837,6 +860,8 @@ and (orientation : portrait) {
         display: block;
     }
     .jeu {
+        justify-content: center;
+        align-items: center;
         max-width: 480px;
         background: #fff;
         margin: 0 auto;
