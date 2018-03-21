@@ -8,6 +8,7 @@ class Game {
         this.opt = document.getElementById('options');
         this.tries = document.getElementById('essais');
         this.coverall = document.getElementsByClassName('cover');
+        this.game = document.getElementsByClassName('jeu');
         this.precedente = -1; // UTILISEE POUR STOCKER L'ID DE LA PRECEDENTE CARTE
         this.attente = 0; // UTILISEE POUR AUTORISER OU NON LE CLIC
         this.result = 0;
@@ -60,10 +61,20 @@ class Game {
         for (let i=1; i<=16; i++){
             const caseId = document.getElementById(`case${i}`);
             if (i<=x){
-                $(caseId).fadeIn();
+                $(caseId).show();
             } else {
-                $(caseId).fadeOut();            
+                $(caseId).hide();            
             }
+        if (x == 8){
+            $(this.game).removeClass('normal');
+            $(this.game).addClass('easy');
+        }else if (x == 12){
+            $(this.game).removeClass('easy');
+            $(this.game).addClass('normal');
+        }else{
+            $(this.game).removeClass('easy');
+            $(this.game).removeClass('normal');
+        }
         }
         this.initgame(x);
     }
